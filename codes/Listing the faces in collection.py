@@ -1,6 +1,6 @@
 import boto3
-client=boto3.client('rekognition', aws_access_key_id="AKIAYENDJJFB5WDMQ2EE",
-                    aws_secret_access_key="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",
+client=boto3.client('rekognition', aws_access_key_id="",
+                    aws_secret_access_key="",
                     region_name='ap-south-1')
 def list_faces_in_collection(collection_id):
     maxResults=2

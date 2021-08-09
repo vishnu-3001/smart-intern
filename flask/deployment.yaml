@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: attendance
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: attendance
+  template:
+    metadata:
+      labels:
+        app: attendance
+    spec:
+      containers:
+        - name: back-end
+          image: public.ecr.aws/f8f1d5r6/project:latest
+          ports:
+            - containerPort: 8080
